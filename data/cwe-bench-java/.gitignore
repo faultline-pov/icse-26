@@ -1,0 +1,6 @@
+java-env/
+*workdir*/
+project-sources/
+setup_projects.log
+build-info/
+backup-project-sources/

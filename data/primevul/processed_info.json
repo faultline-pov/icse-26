@@ -1,0 +1,607 @@
+{
+    "radvd_CVE-2011-3602": {
+        "fix_commit": "92e22ca23e52066da2258df8c76a2dca8a428bcc",
+        "parent_commit": "9dfaaaf740ce784541e76e68de4ae04dce2c0921",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2011-3602",
+        "cve_desc": "Directory traversal vulnerability in device-linux.c in the router advertisement daemon (radvd) before 1.8.2 allows local users to overwrite arbitrary files, and remote attackers to overwrite certain files, via a .. (dot dot) in an interface name.  NOTE: this can be leveraged with a symlink to overwrite arbitrary files.",
+        "vulnerable_funcs": [
+            {
+                "name": "set_interface_var",
+                "file": "device-linux.c"
+            }
+        ]
+    },
+    "php-src_CVE-2015-0231": {
+        "fix_commit": "b585a3aed7880a5fa5c18e2b838fc96f40e075bd",
+        "parent_commit": "f9ad3086693fce680fbe246e4a45aa92edd2ac35",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2015-0231",
+        "cve_desc": "Use-after-free vulnerability in the process_nested_data function in ext/standard/var_unserializer.re in PHP before 5.4.37, 5.5.x before 5.5.21, and 5.6.x before 5.6.5 allows remote attackers to execute arbitrary code via a crafted unserialize call that leverages improper handling of duplicate numerical keys within the serialized properties of an object.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2014-8142.",
+        "vulnerable_funcs": [
+            {
+                "name": "process_nested_data",
+                "file": "ext/standard/var_unserializer.re"
+            }
+        ]
+    },
+    "php-src_CVE-2015-8935": {
+        "fix_commit": "996faf964bba1aec06b153b370a7f20d3dd2bb8b",
+        "parent_commit": "d8bc34942d4f94cecdcbc63aa0772c5717525279",
+        "cwe_ids": [
+            "CWE-79"
+        ],
+        "cve": "CVE-2015-8935",
+        "cve_desc": "The sapi_header_op function in main/SAPI.c in PHP before 5.4.38, 5.5.x before 5.5.22, and 5.6.x before 5.6.6 supports deprecated line folding without considering browser compatibility, which allows remote attackers to conduct cross-site scripting (XSS) attacks against Internet Explorer by leveraging (1) %0A%20 or (2) %0D%0A%20 mishandling in the header function.",
+        "vulnerable_funcs": [
+            {
+                "name": "sapi_header_op",
+                "file": "main/SAPI.c"
+            }
+        ]
+    },
+    "Little-CMS_CVE-2013-7455": {
+        "fix_commit": "fefaaa43c382eee632ea3ad0cfa915335140e1db",
+        "parent_commit": "3d38474e46dc0885877d75361d082768474f3f72",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2013-7455",
+        "cve_desc": "Double free vulnerability in the DefaultICCintents function in cmscnvrt.c in liblcms2 in Little CMS 2.x before 2.6 allows remote attackers to execute arbitrary code via a malformed ICC profile that triggers an error in the default intent handler.",
+        "vulnerable_funcs": [
+            {
+                "name": "DefaultICCintents",
+                "file": "cmscnvrt.c"
+            }
+        ]
+    },
+    "shadowsocks-libev_CVE-2017-15924": {
+        "fix_commit": "c67d275803dc6ea22c558d06b1f7ba9f94cd8de3",
+        "parent_commit": "10a2d3e3cd76b148d5f5996f06267cc40e62cac5",
+        "cwe_ids": [
+            "CWE-78"
+        ],
+        "cve": "CVE-2017-15924",
+        "cve_desc": "In manager.c in ss-manager in shadowsocks-libev 3.1.0, improper parsing allows command injection via shell metacharacters in a JSON configuration request received via 127.0.0.1 UDP traffic, related to the add_server, build_config, and construct_command_line functions.",
+        "vulnerable_funcs": [
+            {
+                "name": "build_config",
+                "file": "manager.c"
+            },
+            {
+                "name": "construct_command_line",
+                "file": "manager.c"
+            },
+            {
+                "name": "add_server",
+                "file": "manager.c"
+            }
+        ]
+    },
+    "ImageMagick_CVE-2016-10048": {
+        "fix_commit": "fc6080f1321fd21e86ef916195cc110b05d9effb",
+        "parent_commit": "96b300c1bf3b213e8e7331ba54de1836b665cef3",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2016-10048",
+        "cve_desc": "Directory traversal vulnerability in magick/module.c in ImageMagick 6.9.4-7 allows remote attackers to load arbitrary modules via unspecified vectors.",
+        "vulnerable_funcs": [
+            {
+                "name": "NewXMLTree",
+                "file": "magick/xml-tree.c"
+            }
+        ]
+    },
+    "lighttpd1.4_CVE-2018-19052": {
+        "fix_commit": "2105dae0f9d7a964375ce681e53cb165375f84c1",
+        "parent_commit": "eb429c9c1981aaf8ab2014fe4dd230d27b2e8309",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2018-19052",
+        "cve_desc": "An issue was discovered in mod_alias_physical_handler in mod_alias.c in lighttpd before 1.4.50. There is potential ../ path traversal of a single directory above an alias target, with a specific mod_alias configuration where the matched alias lacks a trailing '/' character, but the alias target filesystem path does have a trailing '/' character.",
+        "vulnerable_funcs": [
+            {
+                "name": "PHYSICALPATH_FUNC",
+                "file": "mod_alias.c"
+            }
+        ]
+    },
+    "php-src_CVE-2018-17082": {
+        "fix_commit": "23b057742e3cf199612fa8050ae86cae675e214e",
+        "parent_commit": "1ba3314335b8bb7c86c24443588d5ef9c55d4a44",
+        "cwe_ids": [
+            "CWE-79"
+        ],
+        "cve": "CVE-2018-17082",
+        "cve_desc": "The Apache2 component in PHP before 5.6.38, 7.0.x before 7.0.32, 7.1.x before 7.1.22, and 7.2.x before 7.2.10 allows XSS via the body of a \"Transfer-Encoding: chunked\" request, because the bucket brigade is mishandled in the php_handler function in sapi/apache2handler/sapi_apache2.c.",
+        "vulnerable_funcs": [
+            {
+                "name": "php_handler",
+                "file": "sapi_apache2.c"
+            }
+        ]
+    },
+    "neomutt_CVE-2018-14363": {
+        "fix_commit": "9bfab35522301794483f8f9ed60820bdec9be59e",
+        "parent_commit": "98aad9c3f1fb281e35a966d4a9b01b60db402e7a",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2018-14363",
+        "cve_desc": "An issue was discovered in NeoMutt before 2018-07-16. newsrc.c does not properly restrict '/' characters that may have unsafe interaction with cache pathnames.",
+        "vulnerable_funcs": [
+            {
+                "name": "nntp_hcache_namer",
+                "file": "newsrc.c"
+            }
+        ]
+    },
+    "radare2_CVE-2019-16718": {
+        "fix_commit": "5411543a310a470b1257fb93273cdd6e8dfcb3af",
+        "parent_commit": "7b8df7f5a20afcda6ed5c0ee917aaae277437871",
+        "cwe_ids": [
+            "CWE-78"
+        ],
+        "cve": "CVE-2019-16718",
+        "cve_desc": "In radare2 before 3.9.0, a command injection vulnerability exists in bin_symbols() in libr/core/cbin.c. By using a crafted executable file, it's possible to execute arbitrary shell commands with the permissions of the victim. This vulnerability is due to an insufficient fix for CVE-2019-14745 and improper handling of symbol names embedded in executables.",
+        "vulnerable_funcs": [
+            {
+                "name": "bin_symbols",
+                "file": "libr/core/cbin.c"
+            }
+        ]
+    },
+    "pigz_CVE-2015-1191": {
+        "fix_commit": "fdad1406b3ec809f4954ff7cdf9e99eb18c2458f",
+        "parent_commit": "e5318b2cd88f1cb74c0bbce8a618c2b72ec263fb",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2015-1191",
+        "cve_desc": "Multiple directory traversal vulnerabilities in pigz 2.3.1 allow remote attackers to write to arbitrary files via a (1) full pathname or (2) .. (dot dot) in an archive.",
+        "vulnerable_funcs": [
+            {
+                "name": "process",
+                "file": "pigz.c"
+            }
+        ]
+    },
+    "qemu_CVE-2013-6399": {
+        "fix_commit": "4b53c2c72cb5541cf394033b528a6fe2a86c0ac1",
+        "parent_commit": "d2ef4b61fe6d33d2a5dcf100a9b9440de341ad62",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2013-6399",
+        "cve_desc": "Array index error in the virtio_load function in hw/virtio/virtio.c in QEMU before 1.7.2 allows remote attackers to execute arbitrary code via a crafted savevm image.",
+        "vulnerable_funcs": [
+            {
+                "name": "virtio_load",
+                "file": "hw/virtio/virtio.c"
+            }
+        ]
+    },
+    "qemu_CVE-2017-8284": {
+        "fix_commit": "30663fd26c0307e414622c7a8607fbc04f92ec14",
+        "parent_commit": "71407786054cad26de7ef66718b2a57a4bcb49b5",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2017-8284",
+        "cve_desc": "The disas_insn function in target/i386/translate.c in QEMU before 2.9.0, when TCG mode without hardware acceleration is used, does not limit the instruction size, which allows local users to gain privileges by creating a modified basic block that injects code into a setuid program, as demonstrated by procmail. NOTE: the vendor has stated \"this bug does not violate any security guarantees QEMU makes.",
+        "vulnerable_funcs": [
+            {
+                "name": "disas_insn",
+                "file": "translate.c"
+            }
+        ]
+    },
+    "qemu_CVE-2013-4537": {
+        "fix_commit": "a9c380db3b8c6af19546a68145c8d1438a09c92b",
+        "parent_commit": "767adce2d9cd397de3418caa16be35ea18d56f22",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2013-4537",
+        "cve_desc": "The ssi_sd_transfer function in hw/sd/ssi-sd.c in QEMU before 1.7.2 allows remote attackers to execute arbitrary code via a crafted arglen value in a savevm image.",
+        "vulnerable_funcs": [
+            {
+                "name": "ssi_sd_load",
+                "file": "hw/sd/ssi-sd.c"
+            }
+        ]
+    },
+    "flatpak_CVE-2022-21682": {
+        "fix_commit": "445bddeee657fdc8d2a0a1f0de12975400d4fc1a",
+        "parent_commit": "54ec1a482dfc668127eaae57f135e6a8e0bc52da",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2022-21682",
+        "cve_desc": "Flatpak is a Linux application sandboxing and distribution framework. A path traversal vulnerability affects versions of Flatpak prior to 1.12.3 and 1.10.6. flatpak-builder applies `finish-args` last in the build. At this point the build directory will have the full access that is specified in the manifest, so running `flatpak build` against it will gain those permissions. Normally this will not be done, so this is not problem. However, if `--mirror-screenshots-url` is specified, then flatpak-builder will launch `flatpak build --nofilesystem=host appstream-utils mirror-screenshots` after finalization, which can lead to issues even with the `--nofilesystem=host` protection. In normal use, the only issue is that these empty directories can be created wherever the user has write permissions. However, a malicious application could replace the `appstream-util` binary and potentially do something more hostile. This has been resolved in Flatpak 1.12.3 and 1.10.6 by changing the behaviour of `--nofilesystem=home` and `--nofilesystem=host`.",
+        "vulnerable_funcs": [
+            {
+                "name": "flatpak_context_merge",
+                "file": "common/flatpak-context.c"
+            }
+        ]
+    },
+    "hhvm_CVE-2014-9714": {
+        "fix_commit": "324701c9fd31beb4f070f1b7ef78b115fbdfec34",
+        "parent_commit": "d81ad6e8711aa20abe80a3a96ed86890f5cd188c",
+        "cwe_ids": [
+            "CWE-79"
+        ],
+        "cve": "CVE-2014-9714",
+        "cve_desc": "Cross-site scripting (XSS) vulnerability in the WddxPacket::recursiveAddVar function in HHVM (aka the HipHop Virtual Machine) before 3.5.0 allows remote attackers to inject arbitrary web script or HTML via a crafted string to the wddx_serialize_value function.",
+        "vulnerable_funcs": [
+            {
+                "name": "recursiveAddVar",
+                "file": "ext_wddx.cpp"
+            }
+        ]
+    },
+    "neomutt_CVE-2018-14355": {
+        "fix_commit": "57971dba06346b2d7179294f4528b8d4427a7c5d",
+        "parent_commit": "2761cab29583bbb7188cd052db5b33e7e545ed71",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2018-14355",
+        "cve_desc": "An issue was discovered in Mutt before 1.10.1 and NeoMutt before 2018-07-16. imap/util.c mishandles \"..\" directory traversal in a mailbox name.",
+        "vulnerable_funcs": [
+            {
+                "name": "imap_hcache_open",
+                "file": "imap/util.c"
+            }
+        ]
+    },
+    "newsbeuter_CVE-2017-14500": {
+        "fix_commit": "c8fea2f60c18ed30bdd1bb6f798e994e51a58260",
+        "parent_commit": "1bc93b8d12a48279a11d8ee3613d31cc04e55ed5",
+        "cwe_ids": [
+            "CWE-78"
+        ],
+        "cve": "CVE-2017-14500",
+        "cve_desc": "Improper Neutralization of Special Elements used in an OS Command in the podcast playback function of Podbeuter in Newsbeuter 0.3 through 2.9 allows remote attackers to perform user-assisted code execution by crafting an RSS item with a media enclosure (i.e., a podcast file) that includes shell metacharacters in its filename, related to pb_controller.cpp and queueloader.cpp, a different vulnerability than CVE-2017-12904.",
+        "vulnerable_funcs": [
+            {
+                "name": "get_filename",
+                "file": "queueloader.cpp"
+            },
+            {
+                "name": "play_file",
+                "file": "pb_controller.cpp"
+            },
+            {
+                "name": "get_filename",
+                "file": "queueloader.cpp"
+            },
+            {
+                "name": "play_file",
+                "file": "pb_controller.cpp"
+            }
+        ]
+    },
+    "flatpak_CVE-2021-21381": {
+        "fix_commit": "8279c5818425b6812523e3805bbe242fb6a5d961",
+        "parent_commit": "c638bf92082f852422ee0c7aa4c99e95c5f16435",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2021-21381",
+        "cve_desc": "Flatpak is a system for building, distributing, and running sandboxed desktop applications on Linux. In Flatpack since version 0.9.4 and before version 1.10.2 has a vulnerability in the \"file forwarding\" feature which can be used by an attacker to gain access to files that would not ordinarily be allowed by the app's permissions. By putting the special tokens `@@` and/or `@@u` in the Exec field of a Flatpak app's .desktop file, a malicious app publisher can trick flatpak into behaving as though the user had chosen to open a target file with their Flatpak app, which automatically makes that file available to the Flatpak app. This is fixed in version 1.10.2. A minimal solution is the first commit \"`Disallow @@ and @@U usage in desktop files`\". The follow-up commits \"`dir: Reserve the whole @@ prefix`\" and \"`dir: Refuse to export .desktop files with suspicious uses of @@ tokens`\" are recommended, but not strictly required. As a workaround, avoid installing Flatpak apps from untrusted sources, or check the contents of the exported `.desktop` files in `exports/share/applications/*.desktop` (typically `~/.local/share/flatpak/exports/share/applications/*.desktop` and `/var/lib/flatpak/exports/share/applications/*.desktop`) to make sure that literal filenames do not follow `@@` or `@@u`.",
+        "vulnerable_funcs": [
+            {
+                "name": "export_desktop_file",
+                "file": "common/flatpak-dir.c"
+            }
+        ]
+    },
+    "hhvm_CVE-2014-9767": {
+        "fix_commit": "65c95a01541dd2fbc9c978ac53bed235b5376686",
+        "parent_commit": "06f3fc8091d8da793552db0e4d9a0d4add9c0bcc",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2014-9767",
+        "cve_desc": "Directory traversal vulnerability in the ZipArchive::extractTo function in ext/zip/php_zip.c in PHP before 5.4.45, 5.5.x before 5.5.29, and 5.6.x before 5.6.13 and ext/zip/ext_zip.cpp in HHVM before 3.12.1 allows remote attackers to create arbitrary empty directories via a crafted ZIP archive.",
+        "vulnerable_funcs": [
+            {
+                "name": "extractFileTo",
+                "file": "ext_zip.cpp"
+            }
+        ]
+    },
+    "mruby_CVE-2022-0630": {
+        "fix_commit": "ff3a5ebed6ffbe3e70481531cfb969b497aa73ad",
+        "parent_commit": "ecb28f4bf463483cf914c799d086b0cfff997aee",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2022-0630",
+        "cve_desc": "Out-of-bounds Read in Homebrew mruby prior to 3.2.",
+        "vulnerable_funcs": [
+            {
+                "name": "mrb_vm_exec",
+                "file": "src/vm.c"
+            }
+        ]
+    },
+    "uftpd_CVE-2020-5221": {
+        "fix_commit": "455b47d3756aed162d2d0ef7f40b549f3b5b30fe",
+        "parent_commit": "0fb2c031ce0ace07cc19cd2cb2143c4b5a63c9dd",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2020-5221",
+        "cve_desc": "In uftpd before 2.11, it is possible for an unauthenticated user to perform a directory traversal attack using multiple different FTP commands and read and write to arbitrary locations on the filesystem due to the lack of a well-written chroot jail in compose_abspath(). This has been fixed in version 2.11",
+        "vulnerable_funcs": [
+            {
+                "name": "compose_path",
+                "file": "common.c"
+            }
+        ]
+    },
+    "ytnef_CVE-2017-6802": {
+        "fix_commit": "22f8346c8d4f0020a40d9f258fdb3bfc097359cc",
+        "parent_commit": "a34760f1d96e67ad4e68dce9a0741091cc7ed77b",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2017-6802",
+        "cve_desc": "An issue was discovered in ytnef before 1.9.2. There is a potential heap-based buffer over-read on incoming Compressed RTF Streams, related to DecompressRTF() in libytnef.",
+        "vulnerable_funcs": [
+            {
+                "name": "DecompressRTF",
+                "file": "ytnef.c"
+            }
+        ]
+    },
+    "xrootd_CVE-2017-1000215": {
+        "fix_commit": "befa2e627a5a33a38c92db3e57c07d8246a24acf",
+        "parent_commit": "a315fd268709f2aa01b85b7be03a71a13f278c21",
+        "cwe_ids": [
+            "CWE-78"
+        ],
+        "cve": "CVE-2017-1000215",
+        "cve_desc": "ROOT xrootd version 4.6.0 and below is vulnerable to an unauthenticated shell command injection resulting in remote code execution",
+        "vulnerable_funcs": [
+            {
+                "name": "Initialize",
+                "file": "XrdClDefaultEnv.cc"
+            }
+        ]
+    },
+    "torque_CVE-2013-4495": {
+        "fix_commit": "64da0af7ed27284f3397081313850bba270593db",
+        "parent_commit": "07df4fab2916a8d1d014a14bac037daf344676bf",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2013-4495",
+        "cve_desc": "The send_the_mail function in server/svr_mail.c in Terascale Open-Source Resource and Queue Manager (aka TORQUE Resource Manager) before 4.2.6 allows remote attackers to execute arbitrary commands via shell metacharacters in the email (-M switch) to qsub.",
+        "vulnerable_funcs": [
+            {
+                "name": "svr_mailowner",
+                "file": "svr_mail.c"
+            }
+        ]
+    },
+    "poco_CVE-2017-1000472": {
+        "fix_commit": "bb7e5feece68ccfd8660caee93da25c5c39a4707",
+        "parent_commit": "646c22c58653151013a29147acd8c8f29911f0a8",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2017-1000472",
+        "cve_desc": "The ZipCommon::isValidPath() function in Zip/src/ZipCommon.cpp in POCO C++ Libraries before 1.8 does not properly restrict the filename value in the ZIP header, which allows attackers to conduct absolute path traversal attacks during the ZIP decompression, and possibly create or overwrite arbitrary files, via a crafted ZIP file, related to a \"file path injection vulnerability\".",
+        "vulnerable_funcs": [
+            {
+                "name": "isValidPath",
+                "file": "Zip/src/ZipCommon.cpp"
+            }
+        ]
+    },
+    "ekiga_CVE-2011-1830": {
+        "fix_commit": "02654fc949722a78d41fcffac8687d73d8574647",
+        "parent_commit": "6d7cf7fbe8575edfb81641f3dddb6c6944e6b45c",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2011-1830",
+        "cve_desc": "Ekiga versions before 3.3.0 attempted to load a module from /tmp/ekiga_test.so.",
+        "vulnerable_funcs": [
+            {
+                "name": "plugin_init",
+                "file": "lib/engine/plugin/plugin-core.cpp"
+            }
+        ]
+    },
+    "openexr_CVE-2020-16587": {
+        "fix_commit": "8b5370c688a7362673c3a5256d93695617a4cd9a",
+        "parent_commit": "d5800c14296527b3540da7aefd28b5937158d2cc",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2020-16587",
+        "cve_desc": "A heap-based buffer overflow vulnerability exists in Academy Software Foundation OpenEXR 2.3.0 in chunkOffsetReconstruction in ImfMultiPartInputFile.cpp that can cause a denial of service via a crafted EXR file.",
+        "vulnerable_funcs": [
+            {
+                "name": "chunkOffsetReconstruction",
+                "file": "OpenEXR/IlmImf/ImfMultiPartInputFile.cpp"
+            }
+        ]
+    },
+    "file-roller_CVE-2019-16680": {
+        "fix_commit": "57268e51e59b61c9e3125eb0f65551c7084297e2",
+        "parent_commit": "1659a14e5b60f19024d72bc5383cd76f40a52aba",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2019-16680",
+        "cve_desc": "An issue was discovered in GNOME file-roller before 3.29.91. It allows a single ./../ path traversal via a filename contained in a TAR archive, possibly overwriting a file during extraction.",
+        "vulnerable_funcs": [
+            {
+                "name": "sanitize_filename",
+                "file": "glib-utils.c"
+            }
+        ]
+    },
+    "vim_CVE-2019-12735": {
+        "fix_commit": "53575521406739cf20bbe4e384d88e7dca11f040",
+        "parent_commit": "5c017b2de28d19dfa4af58b8973e32f31bb1477e",
+        "cwe_ids": [
+            "CWE-78"
+        ],
+        "cve": "CVE-2019-12735",
+        "cve_desc": "getchar.c in Vim before 8.1.1365 and Neovim before 0.3.6 allows remote attackers to execute arbitrary OS commands via the :source! command in a modeline, as demonstrated by execute in Vim, and assert_fails or nvim_input in Neovim.",
+        "vulnerable_funcs": [
+            {
+                "name": "openscript",
+                "file": "None"
+            }
+        ]
+    },
+    "hexchat_CVE-2016-2087": {
+        "fix_commit": "15600f405f2d5bda6ccf0dd73957395716e0d4d3",
+        "parent_commit": "910851e04daad2927d6a3795205afb85e4d164e4",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2016-2087",
+        "cve_desc": "Directory traversal vulnerability in the client in HexChat 2.11.0 allows remote IRC servers to read or modify arbitrary files via a .. (dot dot) in the server name.",
+        "vulnerable_funcs": [
+            {
+                "name": "scrollback_get_filename",
+                "file": "src/common/text.c"
+            }
+        ]
+    },
+    "unbound_CVE-2019-18934": {
+        "fix_commit": "34e52a4313d59b9d57e928c44300fd81e1a48910",
+        "parent_commit": "b83d9f8d0481918253ef178629daccc2e66afe93",
+        "cwe_ids": [
+            "CWE-78"
+        ],
+        "cve": "CVE-2019-18934",
+        "cve_desc": "Unbound 1.6.4 through 1.9.4 contain a vulnerability in the ipsec module that can cause shell code execution after receiving a specially crafted answer. This issue can only be triggered if unbound was compiled with `--enable-ipsecmod` support, and ipsecmod is enabled and used in the configuration.",
+        "vulnerable_funcs": [
+            {
+                "name": "call_hook",
+                "file": "ipsecmod.c"
+            }
+        ]
+    },
+    "php-src_CVE-2018-5712": {
+        "fix_commit": "4e3f55c36272a5f29b50e1924b78e9db1b23f214",
+        "parent_commit": "f03943129b18fac7bbb0801eef8298e13cfce106",
+        "cwe_ids": [
+            "CWE-79"
+        ],
+        "cve": "CVE-2018-5712",
+        "cve_desc": "An issue was discovered in PHP before 5.6.33, 7.0.x before 7.0.27, 7.1.x before 7.1.13, and 7.2.x before 7.2.1. There is Reflected XSS on the PHAR 404 error page via the URI of a request for a .phar file.",
+        "vulnerable_funcs": [
+            {
+                "name": "phar_get_stub",
+                "file": "ext/phar/stub.h"
+            }
+        ]
+    },
+    "mutt_CVE-2018-14355": {
+        "fix_commit": "31eef6c766f47df8281942d19f76e35f475c781d",
+        "parent_commit": "6aed28b40a0410ec47d40c8c7296d8d10bae7576",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2018-14355",
+        "cve_desc": "An issue was discovered in Mutt before 1.10.1 and NeoMutt before 2018-07-16. imap/util.c mishandles \"..\" directory traversal in a mailbox name.",
+        "vulnerable_funcs": [
+            {
+                "name": "imap_hcache_open",
+                "file": "imap/util.c"
+            }
+        ]
+    },
+    "samba_CVE-2016-2119": {
+        "fix_commit": "94295b7aa22d2544af5323bca70d3dcb97fd7c64",
+        "parent_commit": "46b5e4aca6adb12a27efaad3bfe66c2d8a82ec95",
+        "cwe_ids": [
+            "CWE-94"
+        ],
+        "cve": "CVE-2016-2119",
+        "cve_desc": "libcli/smb/smbXcli_base.c in Samba 4.x before 4.2.14, 4.3.x before 4.3.11, and 4.4.x before 4.4.5 allows man-in-the-middle attackers to bypass a client-signing protection mechanism, and consequently spoof SMB2 and SMB3 servers, via the (1) SMB2_SESSION_FLAG_IS_GUEST or (2) SMB2_SESSION_FLAG_IS_NULL flag.",
+        "vulnerable_funcs": [
+            {
+                "name": "cli_session_setup_gensec_remote_done",
+                "file": "source3/libsmb/cliconnect.c"
+            }
+        ]
+    },
+    "exim_CVE-2019-10149": {
+        "fix_commit": "d740d2111f189760593a303124ff6b9b1f83453d",
+        "parent_commit": "f8382c5973eea89ec6013f9899941f2aeb4fb429",
+        "cwe_ids": [
+            "CWE-78"
+        ],
+        "cve": "CVE-2019-10149",
+        "cve_desc": "A flaw was found in Exim versions 4.87 to 4.91 (inclusive). Improper validation of recipient address in deliver_message() function in /src/deliver.c may lead to remote command execution.",
+        "vulnerable_funcs": [
+            {
+                "name": "deliver_message",
+                "file": "src/src/deliver.c"
+            }
+        ]
+    },
+    "ntp_CVE-2015-7851": {
+        "fix_commit": "184516e143ce4448ddb5b9876dd372008cc779f6",
+        "parent_commit": "8482b536f9494a5d45196ab5b7e13040f5940261",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2015-7851",
+        "cve_desc": "Directory traversal vulnerability in the save_config function in ntpd in ntp_control.c in NTP before 4.2.8p4, when used on systems that do not use '\\' or '/' characters for directory separation such as OpenVMS, allows remote authenticated users to overwrite arbitrary files.",
+        "vulnerable_funcs": [
+            {
+                "name": "save_config",
+                "file": "ntpd/ntp_control.c"
+            }
+        ]
+    },
+    "Sigil_CVE-2019-14452": {
+        "fix_commit": "0979ba8d10c96ebca330715bfd4494ea0e019a8f",
+        "parent_commit": "17ea1241a98c9c8ade472ebc6770b8bf490874ab",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2019-14452",
+        "cve_desc": "Sigil before 0.9.16 is vulnerable to a directory traversal, allowing attackers to write arbitrary files via a ../ (dot dot slash) in a ZIP archive entry that is mishandled during extraction.",
+        "vulnerable_funcs": [
+            {
+                "name": "UnZip",
+                "file": "src/Misc/Utility.cpp"
+            }
+        ]
+    },
+    "wkhtmltopdf_CVE-2020-21365": {
+        "fix_commit": "2a5f25077895fb075812c0f599326f079a59d6cf",
+        "parent_commit": "57c23e01ea42a5a63d8d75647d98149819b6d38a",
+        "cwe_ids": [
+            "CWE-22"
+        ],
+        "cve": "CVE-2020-21365",
+        "cve_desc": "Directory traversal vulnerability in wkhtmltopdf through 0.12.5 allows remote attackers to read local files and disclose sensitive information via a crafted html file running with the default configurations.",
+        "vulnerable_funcs": [
+            {
+                "name": "LoadPage",
+                "file": "loadsettings.cc"
+            }
+        ]
+    }
+}
